@@ -72,6 +72,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'R4C.wsgi.application'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.ru'  # Замените на адрес вашего SMTP-сервера
+EMAIL_PORT = 587  # Порт вашего SMTP-сервера (обычно 587 для TLS)
+EMAIL_USE_TLS = True  # Используйте TLS для безопасной отправки почты
+EMAIL_HOST_USER = 'rob.pap@mail.ru'  # Ваше имя пользователя для SMTP-сервера
+EMAIL_HOST_PASSWORD = 'GDtEwM1WtLkgKk0Ccph0'  # Ваш пароль для SMTP-сервера
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

@@ -48,10 +48,10 @@ def get_robots(request):
         # Получите все уникальные модели роботов из базы данных
         models = Robot.objects.values_list('model', flat=True).distinct()
 
-        # Создайте новую книгу Excel
+        # Новая книга Excel
         workbook = Workbook()
 
-        # Для каждой модели создайте новый лист
+        # Новые листы для всех моделей
         for model in models:
             worksheet = workbook.create_sheet(title=model)
 
